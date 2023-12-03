@@ -17,12 +17,10 @@ constructor( private key: Key) { }
 }
 
 abstract class House {
-    door: boolean = false;
-    key: Key;
-    tenants: Person[] = [];
+  protected  door: boolean = false;
+  protected  tenants: Person[] = [];
   
-    constructor(key: Key) {
-      this.key = key;
+    constructor(protected key: Key) {
     }
   
     comeIn(person: Person): void {
